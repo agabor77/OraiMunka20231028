@@ -1,0 +1,80 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    grid-template-areas: 
+        'h n n'
+        'as f ar';
+}
+
+main *{
+    padding: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    text-align: right;
+    color: white;
+    opacity: 0.6;
+}
+
+header{
+    height: 200px;
+    width: auto;
+    background-image: url("img/dandelion.jpg");
+    background-position: center center;
+    border-radius: 10px;
+    grid-area: h;
+}
+
+header:hover, nav:hover, aside:hover, footer:hover, article:hover{
+    opacity: 1;
+}
+
+nav{
+    height: 200px;
+    width: auto;
+    background-image: url("img/dand2.jpg");
+    grid-area: n;
+    padding-top: 20px; padding-left: 20px;
+}
+
+#navsor{
+    background-color:rgba(204, 204, 221, 0.3);
+    text-align: left;
+}
+
+#navsor a{
+    text-decoration: none;
+    padding-right: 10px;
+    opacity: 1;
+}
+
+#navsor a:hover{
+    color: black;
+}
+
+aside{
+    height: 200px;
+    background-image: url("img/dand3.jpg");
+    grid-area: as;
+}
+
+footer{
+    height: 200px;
+    background-image: url("img/dandy.gif");
+    grid-area: f;
+}
+
+article{
+    height: 200px;
+    background-image: url("img/dandy2.gif");
+    grid-area: ar;
+}
+
+@media screen and (max-width: 400px){
+main{
+    display: block;
+}
+    
+}
